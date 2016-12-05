@@ -7,7 +7,9 @@ if not len(sys.argv) == 4:
 
 level = int(sys.argv[2]) # depth k
 length = int(sys.argv[3]) # length l (output)
+markov_chain = {}
 
 input_file = open(sys.argv[1], "r")
+corpus = input_file.read().replace('\n', ' ').rstrip('\r\n')
 
 print(length)
